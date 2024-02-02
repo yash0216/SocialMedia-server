@@ -26,12 +26,7 @@ app.use(
 );
 app.use(morgan("common"));
 app.use(cookieParser());
-app.use(
-  cors({
-    credentials: true,
-    origin: "https://social-media-client-seven.vercel.app/",
-  })
-);
+app.use(cors());
 app.use("/auth", authRouter);
 app.use("/posts", postRouter);
 app.use("/user", userRouter);
