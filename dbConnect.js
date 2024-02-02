@@ -9,6 +9,7 @@ module.exports = async () => {
       useNewUrlParser: true,
     });
   } catch (error) {
+    console.log(error);
     process.exit(1);
   }
 };
